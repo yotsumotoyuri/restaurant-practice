@@ -1,0 +1,171 @@
+.top{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-video{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.top__mv::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.top__img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+/* コンセプト紹介 */
+.introduction__concept-ttl{
+    border-bottom: 2px solid #EE7800;
+    padding-bottom: 3px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.introduction__concept-ttl2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.introduction__concept p{
+    font-size: 20px;
+}
+
+/* メニュー */
+.menu-container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.menu-item{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #213a70;
+    position: relative;
+    display: inline-block;
+    line-height: 1.5;
+    width: 150px;
+}
+
+.menu-item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 30px;
+    height: 2px;
+    background-color: #EE7800;
+}
+
+.menu-item a{
+    text-decoration: none;
+    color: #213a70;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-item a::after{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #213a70;
+    margin-top: 4px;
+}
+
+/* こだわり */
+.passion{
+    padding: 50px 10px;
+}
+
+.passion__card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    width: 90%;
+}
+
+.passion__img{
+    width: 60%;
+}
+
+.passion__img img{
+    aspect-ratio: 4 / 3;
+}
+
+.passion__txt{
+    width: 38%;
+    margin: 0 auto;
+}
+
+.passion__numbers{
+    font-size: 14px;
+    border-bottom: 2px solid #EE7800;
+    display: inline-block;
+    line-height: 0;
+    padding-bottom: 10px;
+}
+
+.passion__txt-h2{
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 0;
+    padding:0 0 20px;
+}
+
+@media (max-width: 768px){
+    /* メニュー */
+    .menu-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .menu-item:nth-child(1),
+    .menu-item:nth-child(2){
+        margin-bottom: 20px;
+    }
+
+    /* こだわり */
+    .passion__card{
+        flex-direction: column;
+        margin: 0 auto 30px;
+    }
+
+    .passion__img{
+        width: 100%;
+    }
+
+    .passion__txt{
+        width: 100%;
+    }
+
+    .passion__txt-h2{
+        font-size: 28px;
+    }
+}

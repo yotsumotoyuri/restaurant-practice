@@ -1,0 +1,75 @@
+body{
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 2;
+}
+
+.bc-unbleached{
+    background-color: #fbf6ec;
+}
+
+img{
+    width: 100%;
+}
+
+.pd80{
+    padding: 80px 0;
+}
+
+.mg80{
+    margin: 80px 0;
+}
+
+.w1200 {
+    max-width: 1200px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.w750{
+    max-width: 750px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.w500 {
+    max-width: 500px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.right{
+    margin: 0 0 0 auto;
+}
+
+.ttl{
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    display: inline-block;
+    line-height: 0;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.ttl::after{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 2px;
+    background-color:#EE7800;
+}
+
+@media (max-width: 768px){
+
+}
