@@ -106,12 +106,13 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(33,58,112,0.4);
     width: 90%;
 }
 
 .passion__img{
-    width: 60%;
+    width: 58%;
 }
 
 .passion__img img{
@@ -135,9 +136,55 @@
     font-family: "Zen Kurenaido", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 0;
     padding:0 0 20px;
+}
+
+/* おすすめメニュー */
+.recommend{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 10px;
+}
+
+.recommend-item{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+}
+
+.recommend-item::after{
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 100px;
+    background-color: #fbfaf5;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(33, 58, 112, 0.4);
+}
+
+.recommend-img{
+    width: 75%;
+    z-index: 2;
+}
+
+.recommend__label{
+    background-color: #EE7800;
+    color: #213a70;
+    writing-mode: vertical-rl;
+    padding: 15px;
+    line-height: 0;
+    font-weight: bold;
+    letter-spacing: 4px;
+    z-index: 3;
 }
 
 @media (max-width: 768px){
@@ -167,5 +214,19 @@
 
     .passion__txt-h2{
         font-size: 28px;
+    }
+
+    /* おすすめメニュー */
+    .recommend{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .recommend-item {
+        margin-bottom: 100px;
+    }
+
+    .recommend-item::after {
+        bottom: -25%;
+        width: 80%;
     }
 }

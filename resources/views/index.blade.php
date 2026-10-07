@@ -29,7 +29,9 @@
     <div class="introduction bc-unbleached">
       <div class="w1200">
         <div class="introduction__concept">
-          <div class="center"><h2 class="introduction__concept-ttl">朝食のご案内</h2></div>
+          <div class="center">
+            <h2 class="introduction__concept-ttl">朝食のご案内</h2>
+          </div>
           <h2 class="introduction__concept-ttl2">鹿児島の名物を、一番美味しい時間に。</h2>
           <p class="w500">
             桜島を目の前に、最高の状態で味わう郷土の恵みをお届けします。<br>
@@ -45,10 +47,10 @@
               <a href="./">おすすめメニュー</a>
             </div>
             <div class="menu-item">
-              <a href="./">ギャラリー</a>
+              <a href="./">フォトギャラリー</a>
             </div>
             <div class="menu-item">
-              <a href="./">店舗情報</a>
+              <a href="./">朝食会場</a>
             </div>
         </div>
       </div>
@@ -57,8 +59,11 @@
 
     <div class="mg80">
     <div class="passion w1200" id="menu-item1">
-      <div class="center">
-        <h2 class="ttl">こだわり</h2>
+      <div class="ttl center">
+        <div class="ttl-img">
+          <img src="{{ asset('img/sakurazima-ttl.png') }}" alt="">
+        </div>
+        <h2>こだわり</h2>
       </div>
       <div class="passion__card bc-unbleached">
         <div class="passion__img">
@@ -97,6 +102,36 @@
         </div>
       </div>
     </div>
+    </div>
+
+    <div class="mg80">
+      <div class="w1200">
+        <div class="ttl center">
+        <div class="ttl-img">
+          <img src="{{ asset('img/sakurazima-ttl.png') }}" alt="">
+        </div>
+        <h2>おすすめメニュー</h2>
+        <div class="recommend">
+          <div class="recommend-item">
+            <div class="recommend-img">
+              <img src="{{ asset('img/satsumaage.png') }}" alt="">
+            </div>
+            <div class="recommend__label">さつま揚げ</div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-img">
+              <img src="{{ asset('img/chickenrice.png') }}" alt="">
+            </div>
+            <div class="recommend__label">鶏飯</div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-img">
+              <img src="{{ asset('img/porkcutlet.png') }}" alt="">
+            </div>
+            <div class="recommend__label">黒豚とんかつ</div>
+          </div>
+        </div>
+      </div>
     </div>
 @endsection
 

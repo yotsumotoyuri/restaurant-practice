@@ -10,10 +10,6 @@ body{
     background-color: #fbf6ec;
 }
 
-img{
-    width: 100%;
-}
-
 .pd80{
     padding: 80px 0;
 }
@@ -48,28 +44,31 @@ img{
     margin: 0 0 0 auto;
 }
 
-.ttl{
+img{
+    width: 100%;
+}
+
+.ttl h2{
     font-family: "Zen Kurenaido", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    display: inline-block;
     line-height: 0;
-    position: relative;
     padding-bottom: 40px;
+    color: #213a70;
 }
 
-.ttl::after{
-    content: '';
-    position:absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 2px;
-    background-color:#EE7800;
+.ttl-img{
+    width: 10%;
+    display: inline-block;
 }
 
 @media (max-width: 768px){
+    .ttl h2{
+        font-size: 35px;
+    }
+    .ttl-img {
+        width: 30%;
+    }
 
 }
