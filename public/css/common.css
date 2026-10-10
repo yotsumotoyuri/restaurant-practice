@@ -4,6 +4,7 @@ body{
     font-weight: 200;
     font-style: normal;
     line-height: 2;
+    letter-spacing: 0.05em;
 }
 
 .bc-unbleached{
@@ -46,8 +47,20 @@ body{
 
 img{
     width: 100%;
+    display: inline-block;
 }
 
+/* ロゴ */
+.logo{
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 0;
+    color: #213a70;
+}
+
+/* タイトル */
 .ttl h2{
     font-family: "Zen Kurenaido", sans-serif;
     font-weight: 400;
@@ -63,12 +76,178 @@ img{
     display: inline-block;
 }
 
+/* ボタン */
+.button{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #fbf6ec;
+    border: 1.2px solid #EE7800;
+    position: relative;
+    overflow: hidden;
+}
+
+.button a{
+    text-decoration: none;
+    color: #213a70;
+    position: relative;
+    z-index: 2;
+}
+
+.button::after{
+    content: '';
+    display: inline-block;
+    border-style: solid;
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent #213a70;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #EE7800;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    transition: .4s;
+    z-index: 1;
+    opacity: 0;
+}
+
+.button:hover:before{
+    left: 0;
+    opacity: 1;
+}
+
+/* フッター */
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__img {
+    width: 10%;
+}
+
+.footer__img img{
+    vertical-align: bottom;
+}
+
+.footer__border{
+    border-bottom: 1px solid #EE7800;
+    margin-bottom: 10px;
+}
+
+.footer__info{
+    width: 40%;
+}
+
+.footer__info-ul{
+    list-style: none;
+    line-height: 0;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+.footer__info-li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__menu{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__menu-ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer__menu-li{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #213a70;
+    position: relative;
+    list-style: none;
+    width: 200px;
+}
+
+.footer__menu-li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 30px;
+    height: 2px;
+    background-color: #EE7800;
+}
+
+.footer__menu-li a{
+    color: #213a70;
+    text-decoration: none;
+
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.footer__menu-li a:hover{
+    transform: translateX(3px);
+}
+
+.footer__menu-li a::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #213a70;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
 @media (max-width: 768px){
     .ttl h2{
         font-size: 35px;
     }
     .ttl-img {
         width: 30%;
+    }
+
+    /* フッター */
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer__img {
+        width: 30%;
+    }
+
+    .footer__info {
+        width: 100%;
+    }
+
+    .footer__menu {
+        width: 100%;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer__menu-ul{
+        text-align: left;
     }
 
 }
